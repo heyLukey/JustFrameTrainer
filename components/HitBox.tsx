@@ -5,6 +5,7 @@ import { View } from "react-native"
 import MovementButtons from "./MovementButtons"
 import AttackButtons from "./AttackButtons"
 import { useStyles } from "../hooks/useStyles"
+import FrameBar from "./FrameBar"
 
 
 const HitBox: React.FunctionComponent = () => { 
@@ -12,9 +13,12 @@ const HitBox: React.FunctionComponent = () => {
     // const inputSequence = React.useState<InputSeries>([])
 
     return(
-        <View id="HitBox" style={styles.hitBox}>
-            <MovementButtons />
-            <AttackButtons />
+        <View>
+            <FrameBar/>
+            <View id="HitBox" style={styles.hitBox}>
+                <MovementButtons />
+                <AttackButtons />
+            </View>
         </View>
     )
 }

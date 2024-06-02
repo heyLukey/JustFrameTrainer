@@ -29,12 +29,12 @@ const MovementButtons: React.FunctionComponent = () => {
                 handleOnPressIn={handleOnPressIn("r")} 
                 style={styles.movementButtons__right}
             />
-            <HitButton 
+            {/* <HitButton 
                 key={"u"} 
                 handleOnPressIn={handleOnPressIn("u")} 
                 style={styles.movementButtons__up}
                 size="large"
-            />
+            /> */}
         </View>
     )
 }

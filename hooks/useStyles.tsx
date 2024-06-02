@@ -5,8 +5,25 @@ export const useStyles = () => {
     hitBox: {
       backgroundColor: '#fff',
       flexDirection: 'row',
+      height: "80%",
+      width: "100%",
+      padding: 5,
+    },
+    frameBar: {
       height: "100%",
       width: "100%",
+      backgroundColor: '#fff',
+      shadowColor: '#000',
+      shadowOffset: { width: 1, height: 1 },
+      shadowOpacity:  0.5,
+      shadowRadius: 3,
+      elevation: 5,
+    },
+    frameBar__container: {
+      height: "20%",
+      width: "100%",
+      overflow: "hidden",
+      paddingBottom: 5,
     },
     hitButton: {
       borderColor: "#000000",
@@ -52,22 +69,22 @@ export const useStyles = () => {
     },
     attackButtons__1: {
       backgroundColor: "#E50000",
-      top: "17.5%",
+      top: "12.5%",
       left: 0,
     },
     attackButtons__2: {
       backgroundColor: "#E50000",
-      top: "2.5%",
+      top: "0%",
       left: "50%",
     },
     attackButtons__3: {
       backgroundColor: "#E50000",
-      top: "60%",
+      bottom: 0,
       left: 0,
     },
     attackButtons__4: {
       backgroundColor: "#E50000",
-      top: "45%",
+      bottom: "12.5%",
       left: "50%",
     },
   })
