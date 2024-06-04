@@ -5,13 +5,11 @@ import { Gesture, GestureDetector } from "react-native-gesture-handler"
 
 interface HitButtonProps {
     handleOnPressIn: (e: GestureResponderEvent) => void
-    size?: "normal" | "large"
     style?: ViewStyle
 }
 
 const HitButton: React.FunctionComponent<HitButtonProps> = ({
     handleOnPressIn,
-    size = "normal",
     style,
 }) => {
     const styles = useStyles()
@@ -33,12 +31,12 @@ const HitButton: React.FunctionComponent<HitButtonProps> = ({
     const [width, height, radius] = React.useMemo(() => {
         const window = Dimensions.get('window')
         
-        const w = window.width * (size === "large" ? 0.2 : 0.15)
-        const h = window.width * (size === "large" ? 0.2 : 0.15)
+        const w = window.width * 0.15
+        const h = window.width * 0.15
         const r = Math.round(window.width + window.height) / 2
 
         return [w, h, r]
-    },[size])
+    },[])
 
     const innerButtonScale = 0.8
 
@@ -52,10 +50,6 @@ const HitButton: React.FunctionComponent<HitButtonProps> = ({
                         height,
                         position: "absolute"
                     },
-                    size === "large" ? {
-                        bottom: -(height/2),
-                        right: -(width/8),
-                    } : {},
                     styles.hitButton,
                     style, 
                 ]} 

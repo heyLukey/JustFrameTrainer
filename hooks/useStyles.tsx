@@ -4,7 +4,7 @@ export const useStyles = () => {
   // Scale this?
   const textStyles = StyleSheet.create({
     text: {
-      fontSize: 32,
+      fontSize: 6,
     }
   })
 
@@ -46,7 +46,7 @@ export const useStyles = () => {
 
   const frameStyles = StyleSheet.create({
     frame: {
-      width: "1.5%",
+      width: "1.4%",
       borderColor: "#000000",
       borderStyle: 'solid',
       borderWidth: 1,
@@ -56,12 +56,10 @@ export const useStyles = () => {
       alignItems: "center"
     },
     frame__alive: {
-      backgroundColor: "#009E60",
-      opacity: 0.5,
+      backgroundColor: "rgba(0, 158, 96, 0.35)",
     },
     frame__dead: {
-      backgroundColor: "#E50000",
-      opacity: 0.5,
+      backgroundColor: "rgba(0, 0, 0, 0.1)",
     }
   })
 

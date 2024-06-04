@@ -10,7 +10,7 @@ export default function App() {
   ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE);
   NavigationBar.setVisibilityAsync("hidden");
   return (
-    <GestureHandlerRootView style={{ flex: 1 }} id='app'>
+    <GestureHandlerRootView style={{ flex: 1, height: "100%", width: "100%" }} id='app'>
       <StatusBar hidden />
       <HitBox/>
     </GestureHandlerRootView>
