@@ -1,7 +1,14 @@
 import { StyleSheet } from "react-native"
 
 export const useStyles = () => {
-  return StyleSheet.create({
+  // Scale this?
+  const textStyles = StyleSheet.create({
+    text: {
+      fontSize: 32,
+    }
+  })
+
+  const hitBoxStyles = StyleSheet.create({
     hitBox: {
       backgroundColor: '#fff',
       flexDirection: 'row',
@@ -9,15 +16,25 @@ export const useStyles = () => {
       width: "100%",
       padding: 5,
     },
+    hitBox__container: {
+      height: "100%",
+      width: "100%",
+    },
+  })
+
+  const frameBarStyles = StyleSheet.create({
     frameBar: {
       height: "100%",
       width: "100%",
+      alignItems: "center",
+      justifyContent: "center",
       backgroundColor: '#fff',
       shadowColor: '#000',
       shadowOffset: { width: 1, height: 1 },
       shadowOpacity:  0.5,
       shadowRadius: 3,
       elevation: 5,
+      flexDirection: "row"
     },
     frameBar__container: {
       height: "20%",
@@ -25,6 +42,30 @@ export const useStyles = () => {
       overflow: "hidden",
       paddingBottom: 5,
     },
+  })
+
+  const frameStyles = StyleSheet.create({
+    frame: {
+      width: "1.5%",
+      borderColor: "#000000",
+      borderStyle: 'solid',
+      borderWidth: 1,
+      aspectRatio: 1/1,
+      borderLeftWidth: 0,
+      justifyContent: "center",
+      alignItems: "center"
+    },
+    frame__alive: {
+      backgroundColor: "#009E60",
+      opacity: 0.5,
+    },
+    frame__dead: {
+      backgroundColor: "#E50000",
+      opacity: 0.5,
+    }
+  })
+
+  const hitButtonStyles = StyleSheet.create({
     hitButton: {
       borderColor: "#000000",
       borderStyle: 'solid',
@@ -37,6 +78,9 @@ export const useStyles = () => {
       borderStyle: 'solid',
       borderWidth: 1,
     },
+  })
+
+  const movementButtonsStyles = StyleSheet.create({
     movementButtons: {
       height: "100%",
       width: "60%",
@@ -61,6 +105,9 @@ export const useStyles = () => {
     movementButtons__up: {
       backgroundColor: "#FFF"
     },
+  })
+
+  const attackButtonsStyles = StyleSheet.create({
     attackButtons: {
       height: "100%",
       width: "40%",
@@ -87,5 +134,15 @@ export const useStyles = () => {
       bottom: "12.5%",
       left: "50%",
     },
+  })
+
+  return StyleSheet.create({
+    ...textStyles,
+    ...hitBoxStyles,
+    ...frameBarStyles,
+    ...frameStyles,
+    ...hitButtonStyles,
+    ...movementButtonsStyles,
+    ...attackButtonsStyles,
   })
 }

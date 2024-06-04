@@ -10,3 +10,5 @@ export interface InputPoint {
  endFrame: number
 }
 export type InputSeries = InputPoint[]
+
+export type InputFrames = Array<InputPoint>
