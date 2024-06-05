@@ -12,3 +12,5 @@ export interface InputPoint {
 export type InputSeries = InputPoint[]
 
 export type InputFrames = Array<InputPoint>
+
+export type PlayerSide = "p1" | "p2"

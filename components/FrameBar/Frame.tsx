@@ -1,8 +1,8 @@
 import * as React from "react"
 
 import { View, Text} from "react-native"
-import { useStyles } from "../hooks/useStyles"
-import { InputPoint } from "./types"
+import { useStyles } from "../../hooks/useStyles"
+import { InputPoint } from "../types"
 
 interface FrameProps {
   frameValue : InputPoint | null

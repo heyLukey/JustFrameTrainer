@@ -24,6 +24,15 @@ export const useStyles = () => {
 
   const frameBarStyles = StyleSheet.create({
     frameBar: {
+      height: "20%",
+      width: "100%",
+      overflow: "hidden",
+      paddingBottom: 5,
+    },
+  })
+
+  const targetFrameSequenceStyles = StyleSheet.create({
+    targetFrameSequence: {
       height: "100%",
       width: "100%",
       alignItems: "center",
@@ -35,12 +44,6 @@ export const useStyles = () => {
       shadowRadius: 3,
       elevation: 5,
       flexDirection: "row"
-    },
-    frameBar__container: {
-      height: "20%",
-      width: "100%",
-      overflow: "hidden",
-      paddingBottom: 5,
     },
   })
 
@@ -138,6 +141,7 @@ export const useStyles = () => {
     ...textStyles,
     ...hitBoxStyles,
     ...frameBarStyles,
+    ...targetFrameSequenceStyles,
     ...frameStyles,
     ...hitButtonStyles,
     ...movementButtonsStyles,

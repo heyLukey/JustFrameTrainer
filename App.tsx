@@ -1,7 +1,7 @@
 import * as React from "react"
 
 import * as NavigationBar from 'expo-navigation-bar';
-import HitBox from './components/HitBox';
+import HitBox from './components/HitBox/HitBox';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import * as ScreenOrientation from "expo-screen-orientation";
 import { StatusBar } from 'react-native';

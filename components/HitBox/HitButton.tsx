@@ -1,15 +1,17 @@
 import * as React from "react"
-import { Dimensions, GestureResponderEvent, View, ViewStyle } from "react-native"
-import { useStyles } from "../hooks/useStyles"
+import { Dimensions, View, ViewStyle } from "react-native"
+import { useStyles } from "../../hooks/useStyles"
 import { Gesture, GestureDetector } from "react-native-gesture-handler"
 
 interface HitButtonProps {
-    handleOnPressIn: (e: GestureResponderEvent) => void
+    onPressIn: () => void
+    onPressEnd: () => void
     style?: ViewStyle
 }
 
 const HitButton: React.FunctionComponent<HitButtonProps> = ({
-    handleOnPressIn,
+    onPressIn,
+    onPressEnd,
     style,
 }) => {
     const styles = useStyles()
@@ -19,13 +21,17 @@ const HitButton: React.FunctionComponent<HitButtonProps> = ({
         .maxDuration(1000000) 
         .onBegin(() => {
             setIsPressed(true)
-            handleOnPressIn
+            onPressIn()
         })
         .onEnd(() => {
             setIsPressed(false)
+            onPressEnd()
+            console.log("ending")
         })
         .onTouchesCancelled(() => {
             setIsPressed(false)
+            onPressEnd()
+            console.log("cancelling")
         })
 
     const [width, height, radius] = React.useMemo(() => {
