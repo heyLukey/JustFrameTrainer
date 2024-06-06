@@ -4,7 +4,7 @@ import { View } from "react-native"
 import { useStyles } from "../../hooks/useStyles"
 import { InputFrames, InputLiterals } from "../types"
 import TargetFrameSequence from "./TargetFrameSequence"
-import InputFrameSequence from "./InputFramSequence"
+import InputFrameSequence from "./InputFrameSequence"
 
 interface FrameBarProps {
     inputFrames: InputFrames
