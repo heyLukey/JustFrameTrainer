@@ -4,6 +4,7 @@ import { View } from "react-native"
 import { useStyles } from "../../hooks/useStyles"
 import { InputFrames, InputLiterals } from "../types"
 import TargetFrameSequence from "./TargetFrameSequence"
+import InputFrameSequence from "./InputFramSequence"
 
 interface FrameBarProps {
     inputFrames: InputFrames
@@ -12,7 +13,7 @@ interface FrameBarProps {
 
 const FrameBar: React.FunctionComponent<FrameBarProps> = ({
     inputFrames,
-    // currentInputs,
+    currentInputs,
 }) => { 
     const styles = useStyles() 
 
@@ -20,6 +21,9 @@ const FrameBar: React.FunctionComponent<FrameBarProps> = ({
         <View style={styles.frameBar}>
             <TargetFrameSequence 
                 inputFrames={inputFrames}
+            />
+            <InputFrameSequence 
+                currentInputs={currentInputs} 
             />
         </View>
     )

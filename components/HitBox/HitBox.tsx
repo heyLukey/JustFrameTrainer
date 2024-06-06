@@ -38,22 +38,11 @@ const HitBox: React.FunctionComponent = () => {
     console.log(currentInputs, 'currentInputs')
 
     const handleOnPressIn = React.useCallback((input: InputLiterals) => () => {
-        setCurrentInputs((oldArr) => {
-            const newArr = [...oldArr]
-            newArr.push(input)
-            return newArr
-        })
+        setCurrentInputs((oldArr) => [...oldArr, input])
       }, [])
 
     const handleOnPressEnd = React.useCallback((input: InputLiterals) => () => {
-        setCurrentInputs((oldArr) => {
-            const newArr = [...oldArr]
-            const index = newArr.indexOf(input);
-            if (index > -1) {
-                newArr.splice(index, 1);
-            }
-            return newArr;
-        })
+        setCurrentInputs((oldArr) => oldArr.filter(el => el !== input))
     }, [])
 
 
