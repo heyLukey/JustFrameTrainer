@@ -26,12 +26,10 @@ const HitButton: React.FunctionComponent<HitButtonProps> = ({
         .onEnd(() => {
             setIsPressed(false)
             onPressEnd()
-            console.log("ending")
         })
         .onTouchesCancelled(() => {
             setIsPressed(false)
             onPressEnd()
-            console.log("cancelling")
         })
 
     const [width, height, radius] = React.useMemo(() => {
